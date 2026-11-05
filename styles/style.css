@@ -6,7 +6,7 @@
   flex-direction: column;
   gap: 40px;
   color: var(--color-text);
-  font-family: "IBM Plex mono", sans-serif;
+  font-family: "IBM Plex mono", monospace;
   font-size: 18px;
   background-color: var(--main-bg-color);
   background-image: var(--main-bg-image);
@@ -94,10 +94,10 @@
 
 .header__theme-menu-button_active {
   border: 1px solid var(--accent-color);
+  pointer-events: none;
 }
 
 .header__theme-menu-button:hover {
-  border-bottom: 1px solid var(--accent-color);
   outline: none;
   border: 1px solid var(--accent-color-40);
 }
@@ -172,10 +172,14 @@
 }
 
 .article__title {
-  margin-bottom: 10px;
+  margin-block-end: 10px;
   font-weight: 700;
   font-size: inherit;
   line-height: 1.3;
+}
+
+.article_nested {
+  font-weight: 400;
 }
 
 .article__text {
@@ -267,10 +271,6 @@
   .content {
     gap: 80px;
     padding: 0 20px;
-  }
-
-  .article__title {
-    font-weight: 400;
   }
 
   .section_layout-split {
